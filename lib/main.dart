@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ex1/screen/dice_screen.dart';
+import 'package:flutter_ex1/screen/home_screen.dart';
+import 'package:flutter_ex1/screen/miCard_screen.dart';
+import 'package:flutter_ex1/utils/colors.dart';
+
+import 'constant/routes.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +20,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const MyHomePage(),
+      routes: {
+        loginRoute: (context) =>const MiCardScreen(),
+      },
+
     );
   }
 }
@@ -27,22 +38,30 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          const Text(
-            "Doan Quoc Huy - 21IT279",
-            style: TextStyle(
-              fontSize: 17,
-              color: Colors.black,
-              height: 8,
-            ),
+    
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+     theme: ThemeData.light().copyWith(
+        scaffoldBackgroundColor: primaryColor,
+        appBarTheme: AppBarTheme.of(context).copyWith(
+          backgroundColor: backGroundColor,
+          elevation: 0,
+          titleTextStyle: TextStyle(
+            color: primaryColor,
+            fontSize: 20,
+            fontWeight: FontWeight.w600,
           ),
-          Center(
-            child: Image.asset("assets/img/diamond.png"),
-          )
-        ],
+          iconTheme: IconThemeData(
+            color: primaryColor,
+          ),
+        ),
       ),
+      routes: {
+          MiCardScreen.routeName: (context) => const MiCardScreen(),
+          DiceScreen.routeName: (context) => const DiceScreen(),
+          HomeScreen.routeName: (context) => const HomeScreen(),
+        },
+      home: const HomeScreen(),
     );
   }
 }
