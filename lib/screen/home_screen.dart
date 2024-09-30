@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ex1/screen/dice_screen.dart';
+import 'package:flutter_ex1/screen/i_am_rich.dart';
 import 'package:flutter_ex1/screen/miCard_screen.dart';
 import 'package:flutter_ex1/utils/colors.dart';
 import 'package:flutter_ex1/widgets/custom_button.dart';
@@ -22,6 +23,17 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: const EdgeInsets.only(top: 70, right: 20, left: 20),
           child: ListView(
             children: [
+              Padding(
+                padding: const EdgeInsets.all(8),
+                child: CustomButton(
+                  onTap: () {
+                    Navigator.pushNamed(context, IAmRichScreen.routeName);
+                  },
+                  text: "I am Rich",
+                  backgroundColor: backGroundBtnColor,
+                  textColor: textBtnColor,
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.all(8),
                 child: CustomButton(

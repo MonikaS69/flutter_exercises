@@ -71,7 +71,7 @@ class _MiCardScreenState extends State<MiCardScreen> {
                     color: iconColor,
                   ),
                   title: Text(
-                    "baotpq.21it@vku.udn.vn",
+                    "johnpork2021@gmail.com",
                     style: GoogleFonts.sora(
                         fontWeight: FontWeight.w500, fontSize: 20),
                   ),

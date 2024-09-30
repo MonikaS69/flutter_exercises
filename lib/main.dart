@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ex1/screen/dice_screen.dart';
 import 'package:flutter_ex1/screen/home_screen.dart';
+import 'package:flutter_ex1/screen/i_am_rich.dart';
 import 'package:flutter_ex1/screen/miCard_screen.dart';
 import 'package:flutter_ex1/utils/colors.dart';
 
@@ -57,6 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       routes: {
+          IAmRichScreen.routeName: (context) => const IAmRichScreen(),
           MiCardScreen.routeName: (context) => const MiCardScreen(),
           DiceScreen.routeName: (context) => const DiceScreen(),
           HomeScreen.routeName: (context) => const HomeScreen(),
