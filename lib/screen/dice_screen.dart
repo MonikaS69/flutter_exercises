@@ -68,17 +68,19 @@ class _DiceScreenState extends State<DiceScreen> {
                         'assets/img/dices/dice$rightDiceNumber.png')),
               )),
               Expanded(
-                  child: Padding(
-                padding: const EdgeInsets.all(6),
-                child: IconButton(
-                  icon: Image.asset('assets/img/dices/dice$leftDiceNumber.png'),
-                  onPressed: () {
-                    changeFaceDice();
-                  },
-                  splashColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
+                child: Padding(
+                  padding: const EdgeInsets.all(6),
+                  child: IconButton(
+                    icon:
+                        Image.asset('assets/img/dices/dice$leftDiceNumber.png'),
+                    onPressed: () {
+                      changeFaceDice();
+                    },
+                    splashColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                  ),
                 ),
-              ))
+              ),
             ],
           ),
         ),

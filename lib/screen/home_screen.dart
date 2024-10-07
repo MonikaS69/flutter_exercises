@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ex1/screen/dice_screen.dart';
+import 'package:flutter_ex1/screen/eight_ball.dart';
 import 'package:flutter_ex1/screen/i_am_rich.dart';
 import 'package:flutter_ex1/screen/miCard_screen.dart';
 import 'package:flutter_ex1/utils/colors.dart';
@@ -60,9 +61,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.all(8),
                 child: CustomButton(
                   onTap: () {
-                    Navigator.pushNamed(context, MiCardScreen.routeName);
+                    Navigator.pushNamed(context, EightBallScreen.routeName);
                   },
-                  text: "MiCard",
+                  text: "Magic 8 Ball",
                   backgroundColor: backGroundBtnColor,
                   textColor: textBtnColor,
                 ),
